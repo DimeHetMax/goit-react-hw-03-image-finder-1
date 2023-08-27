@@ -1,0 +1,20 @@
+.galleryItem {
+    width: calc(33.33% - 20px); /* Three items in a row with spacing */
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 20px;
+  }
+  
+  .galleryItem .galleryImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .galleryItem:hover {
+    transform: scale(1.05); /* Apply a scale transform on hover */
+  }

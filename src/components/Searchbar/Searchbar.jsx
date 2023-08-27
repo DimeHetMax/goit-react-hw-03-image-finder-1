@@ -1,4 +1,6 @@
 import React from "react";
+import { FaSearch } from 'react-icons/fa';
+import css from "./Searchbar.module.css"
 
 export class Searchbar extends React.Component{
     state={
@@ -16,23 +18,29 @@ export class Searchbar extends React.Component{
         this.setState({query: ""})
       }
     render(){
-        return(
-            <header className="searchbar">
-            <form className="form" onChange={this.handleSearchbar}>
-              <button type="submit" className="button">
-                <span className="button-label">Search</span>
-              </button>
-    
-              <input
-                className="input"
-                type="text"
-                autoComplete="off"
-                autoFocus
-                placeholder="Search images and photos"
-                onChange={this.handleQueryChange}
-              />
-            </form>
-          </header>
-        )
+        return (
+            <header className={css.searchbar}>
+              <form className={css.form} onSubmit={this.handleSearchbar}>
+                <div className={css.inputContainer}>
+                  <input
+                    className={css.input}
+                    type="text"
+                    autoComplete="off"
+                    autoFocus
+                    placeholder="Search images and photos"
+                    value={this.state.query}
+                    onChange={this.handleQueryChange}
+                  />
+                  <button
+                    type="submit"
+                    className={css.button}
+                    onClick={this.handleSearchbar}
+                  >
+                    <FaSearch />
+                  </button>
+                </div>
+              </form>
+            </header>
+          );
     }
 }

@@ -1,0 +1,15 @@
+.loadMoreButton {
+    display: block;
+    margin: 20px auto; /* Center the button horizontally and add vertical spacing */
+    padding: 10px 20px; /* Add padding to make the button more visually appealing */
+    background-color: #007bff; /* Set button background color */
+    color: #fff; /* Set button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Apply rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .loadMoreButton:hover {
+    background-color: #0056b3; /* Darken the background color on hover */
+  }

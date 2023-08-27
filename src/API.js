@@ -5,8 +5,8 @@ axios.defaults.params = { key: API_KEY }
 
  export  const API = async (query, page) =>{
     try {
-        const response = await axios.get(`/?q=${query}&page=${page}`);
-        console.log(response.data);
+        const response = await axios.get(`/?q=${query}&page=${page}&per_page=12&orientation=horizontal`);
+        return response.data
       } catch (error) {
         console.error('Error fetching images:', error);
       }
