@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from 'react-modal';
 import css from "./ImageGalleryItem.module.css"
-Modal.setAppElement('#root')
+Modal.setAppElement('#modal-root')
 const customStyles = {
     overlay: {
         display: 'flex',
